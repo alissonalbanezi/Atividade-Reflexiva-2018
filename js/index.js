@@ -1,11 +1,8 @@
 $(function(){
-    //Quando clicar no botão para adicionar nova formação
-    $("#btn-adicionar-formacao").click(function(e){
-        //Evita que o formulário seja enviado ao clicar nesse botão
-        e.preventDefault();
+       $("#btn-adicionar-formacao").click(function(e){
+               e.preventDefault();
 
-        //Gera a estrutura do HTML necessária para criar uma nova linha para adicionar formação
-        var linha = '<div class="card">'+
+                var linha = '<div class="card">'+
                     '    <div class="card-body">'+
                     '        <div class="row">'+
                     '            <div class="col-12 col-md-5">'+
@@ -24,17 +21,15 @@ $(function(){
                     '    </div>'+
                     '</div>';
         
-        //Adiciona a nova linha na <div id="div-formacoes">
+        
         $("#div-formacoes").append(linha);
     });
 
-    //Quando clicar no botão para adicionar nova experiência
+    
     $("#btn-adicionar-experiencia").click(function(e){
-        //Evita que o formulário seja enviado ao clicar nesse botão
-        e.preventDefault();
+               e.preventDefault();
 
-        //Gera a estrutura do HTML necessária para criar uma nova linha para adicionar experiência
-        var linha = '<div class="card">'+
+                var linha = '<div class="card">'+
                     '    <div class="card-body">'+
                     '        <div class="row">'+
                     '            <div class="col-12 col-md-4">'+
@@ -56,13 +51,10 @@ $(function(){
                     '    </div>'+
                     '</div>';
         
-        //Adiciona a nova linha na <div id="div-experiencias">
-        $("#div-experiencias").append(linha);
+               $("#div-experiencias").append(linha);
     });
 
-    //Quando clicar no botão para remover formação ou experiência
-    $("#div-formacoes, #div-experiencias").on("click", ".btn-remover-item", function(){
-        //Remove a <div class="card"> que contém a formação ou experiência
-        $(this).parent().parent().parent().parent().remove();
+        $("#div-formacoes, #div-experiencias").on("click", ".btn-remover-item", function(){
+                $(this).parent().parent().parent().parent().remove();
     })
 });
